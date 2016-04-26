@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script>
+			var playVid, pauseVid;
+
+			jQuery( function() {
+				var vid = document.getElementById( 'myVideo' );
+
+				playVid = function() {
+					vid.play();
+				};
+
+				pauseVid = function() {
+					vid.pause();
+				};
+			});
+		</script>
+	</head>
+	<body>
+		<button onclick="playVid()" type="button">Push Play</button>
+		<button onclick="pauseVid()" type="button">Push Pause</button>
+		<video id="myVideo" width="600" height="400" controls poster="play.jpeg">
+			<source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+			<source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+			Your browser does not support HTML5 video.
+		</video>
+		<p style= "color:blue; font-family: fantasy">Watch your Video</p>
+	</body>
+</html>
